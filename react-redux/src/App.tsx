@@ -1,41 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+
+//components
 import { Header as _Header } from './components/Header'
 import { Column } from './components/Column'
 
-export function App() {
-  return (
-    <Container>
-      <Header />
-
-      <MainArea>
-        <HorizontalScroll>
-          <Column
-            title="TODO"
-            cards={[
-              { id: 'a', text: '朝食をとる🍞' },
-              { id: 'b', text: 'SNSをチェックする🐦' },
-              { id: 'c', text: '布団に入る (:3[___]' },
-            ]}
-          />
-          <Column
-            title="Doing"
-            cards={[
-              { id: 'd', text: '顔を洗う👐' },
-              { id: 'e', text: '歯を磨く🦷' },
-            ]}
-          />
-          <Column title="Waiting" cards={[]} />
-          <Column
-            title="Done"
-            cards={[{ id: 'f', text: '布団から出る (:3っ)っ -=三[＿＿]' }]}
-          />
-        </HorizontalScroll>
-      </MainArea>
-    </Container>
-  )
-}
-
+//style
 const Container = styled.div`
   display: flex;
   flex-flow: column;
@@ -69,3 +39,37 @@ const HorizontalScroll = styled.div`
     content: '';
   }
 `
+
+//method
+export function App() {
+  return (
+    <Container>
+      <Header />
+
+      <MainArea>
+        <HorizontalScroll>
+          <Column
+            title="TODO"
+            cards={[
+              { id: 'a', text: '朝食をとる🍞' },
+              { id: 'b', text: 'SNSをチェックする🐦' },
+              { id: 'c', text: '布団に入る (:3[___]' },
+            ]}
+          />
+          <Column
+            title="Doing"
+            cards={[
+              { id: 'd', text: '顔を洗う👐' },
+              { id: 'e', text: '歯を磨く🦷' },
+            ]}
+          />
+          <Column title="Waiting" cards={[]} />
+          <Column
+            title="Done"
+            cards={[{ id: 'f', text: '布団から出る (:3っ)っ -=三[＿＿]' }]}
+          />
+        </HorizontalScroll>
+      </MainArea>
+    </Container>
+  )
+}

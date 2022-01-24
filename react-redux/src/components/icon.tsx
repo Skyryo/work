@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 const generateIcon = (d: string) => {
-    return function Icon({ className }: { className?: string }) {
-      return (
-        <SVGBase className={className} viewBox="0 0 20 20">
-          <path d={d} />
-        </SVGBase>
-      )
-    }
+  return function Icon({ className }: { className?: string }) {
+    return (
+      <SVGBase className={className} viewBox="0 0 20 20">
+        <path d={d} />
+      </SVGBase>
+    )
+  }
 }
 
+//style
 const SVGBase = styled.svg`
   display: block;
   width: 1em;

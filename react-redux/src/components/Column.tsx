@@ -7,7 +7,6 @@ import { Card } from './Card'
 import { PlusIcon } from './icon'
 
 //style
-
 const Container = styled.div`
   display: flex;
   flex-flow: column;
@@ -68,6 +67,7 @@ const VerticalScroll = styled.div`
   }
 `
 
+//Column Method
 export const Column = ({
   title,
   cards,

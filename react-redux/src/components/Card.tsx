@@ -1,28 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import * as color from '../color'
+
+//components
 import { CheckIcon as _CheckIcon, TrashIcon } from './icon'
 
-export const Card = ({ text }: { text?: string }) => {
-  return (
-    <Container>
-      <CheckIcon />
-
-      {text?.split(/(https?:\/\/\S+)/g).map((fragment, i) =>
-        i % 2 === 0 ? (
-          <Text key={i}>{fragment}</Text>
-        ) : (
-          <Link key={i} href={fragment}>
-            {fragment}
-          </Link>
-        ),
-      )}
-
-      <DeleteButton />
-    </Container>
-  )
-}
-
+//style
 const Container = styled.div.attrs({
   draggable: true,
 })`
@@ -73,3 +56,24 @@ const Link = styled.a.attrs({
   line-height: 1.7;
   white-space: pre-wrap;
 `
+
+//Card Method
+export const Card = ({ text }: { text?: string }) => {
+  return (
+    <Container>
+      <CheckIcon />
+
+      {text?.split(/(https?:\/\/\S+)/g).map((fragment, i) =>
+        i % 2 === 0 ? (
+          <Text key={i}>{fragment}</Text>
+        ) : (
+          <Link key={i} href={fragment}>
+            {fragment}
+          </Link>
+        ),
+      )}
+
+      <DeleteButton />
+    </Container>
+  )
+}

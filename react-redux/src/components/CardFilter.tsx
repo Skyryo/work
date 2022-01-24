@@ -1,17 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import * as color from '../color'
+
+//components
 import { SearchIcon as _SearchIcon } from './icon'
 
-export const CardFilter = () => {
-  return (
-    <Container>
-      <SearchIcon />
-      <Input placeholder="Filter cards" />
-    </Container>
-  )
-}
-
+//style
 const Container = styled.label`
   display: flex;
   align-items: center;
@@ -36,3 +30,13 @@ const Input = styled.input.attrs({ type: 'search' })`
     outline: none;
   }
 `
+
+//CardFilter Method
+export const CardFilter = () => {
+  return (
+    <Container>
+      <SearchIcon />
+      <Input placeholder="Filter cards" />
+    </Container>
+  )
+}
